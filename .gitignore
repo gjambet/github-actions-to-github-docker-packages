@@ -6,3 +6,7 @@
 .gradle
 build/
 out/
+
+
+#Maven
+target/
