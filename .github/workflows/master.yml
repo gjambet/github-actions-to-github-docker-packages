@@ -18,10 +18,7 @@ jobs:
           java-version: '11.0.X'
 
       - name: Maven Build
-        run: mvn -B package --file pom.xml
-
-      - name: Build Docker image
-        run: docker build -t test-registry .
+        run: mvn -B jib:dockerBuild --file pom.xml
 
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v1
