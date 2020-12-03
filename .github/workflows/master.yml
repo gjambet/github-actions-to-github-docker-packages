@@ -17,7 +17,7 @@ jobs:
         with:
           java-version: '11.0.X'
 
-      - name: Build with Maven
+      - name: Maven Build
         run: mvn -B package --file pom.xml
 
       - name: Build Docker image
@@ -29,5 +29,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          repository: gjambet/test-docker-registry/test-registry
+          repository: gjambet/github-actions-to-github-docker-packages/dummy
           tag_with_ref: true
